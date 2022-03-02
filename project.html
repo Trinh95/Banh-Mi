@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vietnamese Banh Mi</title>
+    <style>
+      body {
+        background: linear-gradient(
+          110.4deg,
+          rgb(247, 112, 15) 6.4%,
+          rgb(248, 50, 88) 100.2%
+        );
+      }
+
+      .wholepaper {
+        background: white;
+        border: 1px all transparent;
+        border-radius: 10px;
+        padding: 10;
+        margin: 5% 23%;
+        box-shadow: 5px 5px 10px lightgray;
+      }
+      h1 {
+        text-align: center;
+        color: #fc3a52;
+        border: 1px solid white;
+        border-radius: 10px;
+        font-size: 35px;
+        font-family: "Gill Sans", sans-serif;
+      }
+      h2 {
+        color: #f9b248;
+        text-align: center;
+        font-family: "Gill Sans", sans-serif;
+        border: 1px dashed #fc3a52;
+        border-radius: 10px;
+        padding: 0;
+        margin: 5px 10%;
+      }
+      img {
+        display: block;
+        margin: 20px auto;
+        width: 60%;
+        border-radius: 15px;
+      }
+      hr {
+        width: 90%;
+      }
+      .banhmi {
+        color: #de703c;
+        font-weight: bold;
+        font-size: 15px;
+        text-align: center;
+        padding: 0px;
+        margin: 0px;
+        font-family: "Gill Sans", sans-serif;
+      }
+      p {
+        color: rgb(218, 61, 13);
+        line-height: 1.5;
+        margin: 2% 5%;
+        font-size: 17px;
+        font-family: "Gill Sans", sans-serif;
+        text-align: justify;
+      }
+      ul {
+        list-style: none;
+        padding: 0;
+        font-size: 12px;
+        font-family: Georgia, serif;
+      }
+
+      li {
+        display: inline-block;
+        margin: 1% 15%;
+      }
+
+      .wiki {
+        color: rgb(218, 61, 13);
+        font-style: italic;
+        text-decoration: none;
+      }
+      .wiki:hover {
+        text-decoration: underline;
+        color: salmon;
+      }
+      .recipe {
+        color: rgb(218, 61, 13);
+        font-style: italic;
+        text-decoration: none;
+      }
+      .recipe:hover {
+        text-decoration: underline;
+        color: salmon;
+      }
+      button {
+        font-size: 15px;
+        font-family: Georgia, serif;
+        background: linear-gradient(
+          110.4deg,
+          rgb(247, 112, 15) 6.4%,
+          rgb(248, 50, 88) 100.2%
+        );
+        border: none;
+        border-radius: 25px;
+        box-shadow: 5px 5px 10px rgb(249, 134, 157);
+        color: white;
+        display: block;
+        margin: 0 auto;
+        padding: 15px;
+        transition: 150ms ease-in-out;
+      }
+      button:hover {
+        cursor: pointer;
+        opacity: 0.8;
+      }
+      .ending {
+        text-align: center;
+        font-family: Georgia, serif;
+        font-size: 13px;
+      }
+      .TrinhLink {
+        color: rgb(218, 61, 13);
+        text-decoration: none;
+      }
+      .TrinhLink:hover {
+        text-decoration: underline;
+        opacity: 0.7;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="wholepaper">
+      <h1>
+        😆 <br />
+        BÁNH MÌ
+      </h1>
+      <h2>THE MOST POPULAR VIETNAMESE STREETFOOD 😋</h2>
+      <img src="/Banh Mi.png" alt="Vietnamese banh mi" />
+      <hr />
+      <div class="banhmi">WHAT IS A BANH MI?</div>
+      <p>
+        It is a Vietnamese recipe, a sandwich made with grilled pork, chicken or
+        pate and commonly served by street vendors in Vietnam.
+        <br />
+        Bánh Mì literally means “bread” in Vietnamese; it refers to the French
+        baguette bread that is used to make this Vietnamese sandwich.
+        <br />
+        This sandwich is popular around the world, especially in countries with
+        a high concentration of Vietnamese people, from France, Canada, United
+        Kingdom to the United States.
+        <br />
+        This popular Vietnamese sandwich can be easily found in most Vietnamese
+        restaurants or Vietnamese-owned sandwich and bakery shops. There are a
+        variety of meat choices—from steamed, pan-fried, to grilled. Banh Mi
+        Thit Nuong grilled meat is the best!
+      </p>
+      <ul>
+        <li>
+          <a
+            href="https://en.wikipedia.org/wiki/B%C3%A1nh_m%C3%AC"
+            target="_blank"
+            class="wiki"
+          >
+            Read more in Wikipedia
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://foodisafourletterword.com/recipe/vietnamese-chicken-banh-mi-recipe-banh-mi-ga-roti/"
+            target="_blank"
+            class="recipe"
+            >Banh Mi's recipe
+          </a>
+        </li>
+        <br />
+      </ul>
+
+      <button>Order Bánh Mì</button>
+      <br />
+      <div class="ending">
+        This website is coded by
+        <span>
+          <a
+            href="https://www.linkedin.com/in/trinh-thimyle/"
+            target="_blank"
+            class="TrinhLink"
+            >Trinh Le</a
+          >
+        </span>
+      </div>
+      <br />
+    </div>
+
+    <script>
+      function order() {
+        let name = prompt("What is your name?");
+        let option = prompt(
+          "What type of Banh mi do you choose? Chicken or Pork?"
+        )
+          .toLowerCase()
+          .trim();
+
+        let button = document.querySelector("button");
+
+        if (option.includes("pork")) {
+          button.innerHTML =
+            "Hello, " +
+            name +
+            ". You've chosen Pork Banh mi.<br /> We will contact you back soon. 😆";
+        } else if (option.includes("chicken")) {
+          button.innerHTML =
+            "Hello, " +
+            name +
+            ". You've chosen Chicken Banh mi.<br /> We will contact you back soon. 😆";
+        } else {
+          button.innerHTML =
+            "Sorry, we don't have the type of Banh mi you asked. 😢";
+        }
+      }
+
+      let orderButton = document.querySelector("button");
+      orderButton.addEventListener("click", order);
+    </script>
+  </body>
+</html>
